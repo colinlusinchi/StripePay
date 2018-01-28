@@ -1,9 +1,15 @@
 console.log("Stripe Payment is running.");
 
+var dotenv = require('dotenv');
+dotenv.config({path: __dirname + '/.env'});
+var skey = process.env.STRIPE_S_KEY;
+
 var express = require("express");
-var stripe = require("stripe")("sktest");
+var stripe = require("stripe")(skey);
 var hbs = require("hbs");
 var bodyParser = require("body-parser");
+// require and load dotenv
+
 
 var app = express();
 
