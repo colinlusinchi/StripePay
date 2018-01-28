@@ -1,0 +1,22 @@
+
+<body>
+
+  <div id="stripe">
+    <form action="/charge" method="post">
+      <script
+      src = "https://checkout.stripe.com/checkout.js"
+      class = "stripe-button"
+      data-key = "pktest"
+      data-amount = "30000"
+      data-name = "product name"
+      data-description = "this is the product you bought"
+      data-locale = "auto"
+      data-currency = "eur"
+      >
+      </script>
+      <input type="hidden" name="chargeAmount" value="30000">
+      <!-- à mettre en back-end pour security reason -->
+    </form>
+  </div>
+
+</body>
